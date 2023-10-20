@@ -1,0 +1,80 @@
+@mixin select-nowidth {
+    height: 35px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.09);
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+@mixin select-60 {
+    width: 60%;
+    margin: auto;
+    @include select-nowidth;
+}
+
+@mixin select-28 {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+}
+
+@mixin select-40 {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+@mixin common-choose {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    width: 60%;
+}
+
+%common-section {
+    text-align: center;
+    margin-top: 50px;
+    h3 {
+        margin-bottom: 0px;
+    }
+    h4 {
+        margin-bottom: 50px;
+        font-weight: 400;
+    }
+    .chooseType {
+        background-color: #fffdf8;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 90%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #typeOfData, #chooseCity{
+        @include select-60;
+    }
+    .submitButton {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 15%;
+        height: 40px;
+        border-radius: 25px;
+        background-color: #A7A7A7;
+        color: white;
+        border: none;
+        cursor: pointer;
+        &.green {
+            background: linear-gradient(to right bottom, #aaffaa, #008800);
+            box-shadow: 6px 6px 8px rgb(207, 207, 207);
+          }
+    }
+}
+
+
+
+
+
+
+

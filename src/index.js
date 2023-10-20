@@ -8,19 +8,22 @@ import Footer from "./components/Footer/Footer";
 import Compare from "./components/Compare/Compare";
 import City from "./components/City/City";
 import Evolution from "./components/Evolution/Evolution";
+import { WeatherDataProvider } from "./components/WeatherDataContext/WeatherDataContext.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Banner />} />
-        <Route path="/Compare" element={<Compare />} />
-        <Route path="/City" element={<City />} />
-        <Route path="/Evolution" element={<Evolution />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <WeatherDataProvider>
+      <Router>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Banner />} />
+          <Route path="/Compare" element={<Compare />} />
+          <Route path="/City" element={<City />} />
+          <Route path="/Evolution" element={<Evolution />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </WeatherDataProvider>
   </React.StrictMode>
 );

@@ -1,0 +1,57 @@
+@import "../../Common.scss";
+
+.chooseTypeOfPeriod {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    #typeOfPeriod {
+        @include select-60;   
+    }
+    .chooseDay {
+        @include common-choose;
+        .year {
+            @include select-28;
+            #fineYear {
+                @include select-nowidth
+            }
+        }
+        .month {
+            @include select-28;
+            #fineMonth {
+                @include select-nowidth;
+            }
+        }
+        .day {
+            @include select-28;
+            #fineDay {
+                @include select-nowidth;
+            }
+        }
+    }
+    .chooseMonth {
+        @include common-choose;
+        .year {
+            @include select-40;
+            #fineYear {
+                @include select-60;
+                width: 100%;
+            }  
+        }
+        .month {
+            @include select-40;
+            #fineMonth {
+                @include select-60;  
+                width: 100%
+            }
+        }
+    }
+    .chooseYear {
+        display: flex;
+        flex-direction: column;
+        #fineYear {
+            @include select-60;
+        }   
+    }
+}
+        
