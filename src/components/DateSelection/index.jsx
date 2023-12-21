@@ -1,5 +1,5 @@
 import React from 'react';
-import "./DateSelection.scss";
+import "./index.scss";
 
 const DateSelection = ({ selectedPeriod, formVisibility, handlePeriodChange, handleYearChange, handleMonthChange, handleDayChange, generateDayOptions, generateYearOptions, generateMonthOptions, label }) => {
 

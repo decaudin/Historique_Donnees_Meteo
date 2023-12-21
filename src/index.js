@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
-import Header from "./components/Header/Header";
-import Banner from "./components/Banner/Banner";
-import Footer from "./components/Footer/Footer";
-import Compare from "./components/Compare/Compare";
-import City from "./components/City/City";
-import Evolution from "./components/Evolution/Evolution";
-import { WeatherDataProvider } from "./components/WeatherDataContext/WeatherDataContext.jsx";
+import Header from "./components/Header";
+import Home from "./pages/Home";
+import Footer from "./components/Footer";
+import Compare from "./pages/Compare";
+import City from "./pages/City";
+import Evolution from "./pages/Evolution";
+import { WeatherDataProvider } from "./utils/context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,7 +17,7 @@ root.render(
       <Router>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Banner />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/Compare" element={<Compare />} />
           <Route path="/City" element={<City />} />
           <Route path="/Evolution" element={<Evolution />} />

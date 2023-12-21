@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import "./Compare.scss";
-import DateSelection from '../DateSelection/DateSelection';
-import { useDataSelection } from '../SharedData/SharedData.jsx';
-import { useWeatherData } from '../WeatherDataContext/WeatherDataContext.jsx';
+import "./index.scss";
+import DateSelection from '../../components/DateSelection';
+import { useDataSelection, useWeatherData } from '../../utils/hooks';
 
 const Compare = () => {
   const {

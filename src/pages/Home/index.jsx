@@ -1,8 +1,7 @@
-import "./Banner.scss";
+import "./index.scss";
 import { Link } from "react-router-dom";
 
-const Banner = () => {
-
+const Home = () => {
 
     return (
         <div className="banner">
@@ -23,5 +22,5 @@ const Banner = () => {
     )
 }
 
-export default Banner;
+export default Home;
 

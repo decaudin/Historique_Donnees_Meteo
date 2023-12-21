@@ -66,11 +66,13 @@
         border: none;
         cursor: pointer;
         &.green {
+            color: black;
             background: linear-gradient(to right bottom, #aaffaa, #008800);
             box-shadow: 6px 6px 8px rgb(207, 207, 207);
           }
     }
 }
+
 
 
 

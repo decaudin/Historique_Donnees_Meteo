@@ -1,4 +1,4 @@
-import "./Evolution.scss";
+import "./index.scss";
 
 const Evolution = () => {
 

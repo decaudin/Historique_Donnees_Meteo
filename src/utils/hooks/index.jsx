@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { WeatherDataContext } from '../context';
 
 export const useDataSelection = () => {
 
@@ -78,10 +79,15 @@ export const useDataSelection = () => {
 
   return {
     selectedPeriod,
+    setSelectedPeriod,
     selectedYear,
+    setSelectedYear,
     selectedMonth,
+    setSelectedMonth,
     selectedDay,
+    setSelectedDay,
     formVisibility,
+    setFormVisibility,
     handlePeriodChange,
     handleYearChange,
     handleMonthChange,
@@ -91,3 +97,7 @@ export const useDataSelection = () => {
     generateMonthOptions,
   };
 }
+
+export const useWeatherData = () => {
+  return useContext(WeatherDataContext);
+};
